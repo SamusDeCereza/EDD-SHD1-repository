@@ -133,4 +133,15 @@ public class main {
         }
     }
 
+    public static float valorInventario(List<Prenda> lista){
+        float valorTotal = 0;
+
+        for (Prenda prenda : lista) {
+            valorTotal = valorTotal + prenda.getPrecio();
+        }
+
+
+        return valorTotal;
+    }
+
 }
