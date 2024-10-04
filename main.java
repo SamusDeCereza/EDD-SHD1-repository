@@ -8,7 +8,7 @@ public class main {
     public static void main(String[] args) {
         
         List<Prenda> prendas = new LinkedList<>();
-
+        
         Prenda prenda1 = new Prenda("Vestido Floreado", "Zara", 2020, 500);
         prendas.add(prenda1);
 
@@ -73,6 +73,20 @@ public class main {
         return respuesta;
     }
 
+    public static void buscarPrenda(String diseniador, List<Prenda> lista){
+        System.out.println("Se han encontrado las siguientes prendas: ");
+
+        for (Prenda prenda : lista) {
+            if(prenda.getDiseniador().equals(diseniador)){
+                System.out.println("\nNombre: " + prenda.getNombre());
+                System.out.println("Diseñador: " + prenda.getDiseniador());
+                System.out.println("Año de colección: " + prenda.getAnioColeccion());
+                System.out.println("Precio: " + prenda.getPrecio());
+            }
+        }
+
+    }
+
     public static Prenda registrarPrenda(Scanner entrada){
         System.out.println("Introduce los datos de la prenda");
         System.out.println("Nombre: ");
@@ -97,7 +111,7 @@ public class main {
             System.out.println("\nNombre: " + prenda.getNombre());
             System.out.println("Diseñador: " + prenda.getDiseniador());
             System.out.println("Año de colección: " + prenda.getAnioColeccion());
-            System.out.println("Precio: " + prenda.getPrecio() + "\n");
+            System.out.println("Precio: " + prenda.getPrecio() + "");
 
         }
     }
