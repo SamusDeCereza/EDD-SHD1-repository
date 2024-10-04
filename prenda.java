@@ -1,11 +1,11 @@
-public class prenda {
+public class Prenda {
     private String nombre;
     private String diseniador;
     private int anioColeccion;
     private float precio;
 
 
-    public prenda(String nombre, String diseniador, int anioColeccion, float precio){
+    public Prenda(String nombre, String diseniador, int anioColeccion, float precio){
         this.nombre = nombre;
         this.diseniador = diseniador;
         this.anioColeccion = anioColeccion;
