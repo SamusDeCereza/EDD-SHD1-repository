@@ -73,6 +73,25 @@ public class main {
         return respuesta;
     }
 
+    public static Prenda registrarPrenda(Scanner entrada){
+        System.out.println("Introduce los datos de la prenda");
+        System.out.println("Nombre: ");
+        String nombre = entrada.nextLine();
+
+        System.out.println("Diseñador: ");
+        String diseniador = entrada.nextLine();
+
+        System.out.println("Año de colección: ");
+        int anio = entrada.nextInt();
+
+        System.out.println("Precio: ");
+        float precio = entrada.nextFloat();
+
+        Prenda prenda = new Prenda(nombre, diseniador, anio, precio);
+
+        return prenda;
+    }
+
     public static void mostrarInventario(List<Prenda> lista){
         for (Prenda prenda : lista) {
             System.out.println("\nNombre: " + prenda.getNombre());
