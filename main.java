@@ -73,8 +73,14 @@ public class main {
         return respuesta;
     }
 
+    public static void mostrarInventario(List<Prenda> lista){
+        for (Prenda prenda : lista) {
+            System.out.println("\nNombre: " + prenda.getNombre());
+            System.out.println("Diseñador: " + prenda.getDiseniador());
+            System.out.println("Año de colección: " + prenda.getAnioColeccion());
+            System.out.println("Precio: " + prenda.getPrecio() + "\n");
 
-
-
+        }
+    }
 
 }
