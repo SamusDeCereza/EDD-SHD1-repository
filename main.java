@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -71,6 +72,22 @@ public class main {
         respuesta = entrada.nextInt();
 
         return respuesta;
+    }
+
+    public static List<Prenda> ordenarPrendas(List<Prenda> lista){
+        Prenda[] arregloPrendas = lista.toArray(new Prenda[lista.size()]);
+        
+        Arrays.sort(arregloPrendas, 
+        (Prenda a, Prenda b) -> Integer.compare(a.getAnioColeccion(), b.getAnioColeccion())
+        );
+
+        List<Prenda> listaPrendas = new LinkedList<>();
+
+        for (Prenda prenda : arregloPrendas) {
+            listaPrendas.add(prenda);
+        }
+
+        return listaPrendas;
     }
 
     public static void buscarPrenda(String diseniador, List<Prenda> lista){
